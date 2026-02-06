@@ -19,8 +19,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.countryapp.presentation.CleanMainActivity
 import com.mahesh_prajapati.hiltmvvmnetworking.TweetsyMainActivity
-//import com.mahesh_prajapati.hiltmvvmnetworking.TweetsyMainActivity
 import com.mahesh.simplequotes.QuotesMainActivity
+import com.mahesh_prajapati.sdui.ui.SDUIMainActivity
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -54,6 +54,8 @@ class MainActivity : ComponentActivity() {
                 context.startActivity(Intent(context, TweetsyMainActivity::class.java))
             }else if(id==7){
                 context.startActivity(Intent(context, CleanMainActivity::class.java))
+            }else if(id==8){
+                context.startActivity(Intent(context, SDUIMainActivity::class.java))
             }
         }) {
             Text(screenTitle, fontSize = 20.sp, modifier = Modifier
@@ -69,7 +71,8 @@ class MainActivity : ComponentActivity() {
         Screens("State Object", 4),
         Screens("Quotes App (Simple UI)", 5),
         Screens("Tweetsy (Hilt + MVVM + Retrofit)", 6),
-        Screens("CountryApp (Clean Architecture + Hilt + Retrofit)", 7)
+        Screens("CountryApp (Clean Architecture + Hilt + Retrofit)", 7),
+        Screens("SDUI", 8)
     )
 }
 
